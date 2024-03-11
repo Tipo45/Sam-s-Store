@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Checkout Form</title>
+    <link rel="stylesheet" href="CSS Files/Payment.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="payment">
+
+            <div class="payment-logo">
+                <p>P</p>
+            </div>
+
+            <h2>Payment Gateway</h2>
+
+            <div class="form">
+                <div class="card space icon-relative">
+                    <label for="card_holder" class="label">Card Holder:</label>
+                    <input type="text" id="card_holder" class="input" name="card_holder" placeholder="Group 8">
+                    <i class="bx bxs-user-circle"></i>
+                </div>
+
+                <div class="card space icon-relative">
+                    <label for="card_number" class="label">Card Number:</label>
+                    <input type="text" id="card_number" class="input" name="card_number" placeholder="Card Number" data-mask="0000 0000 0000 0000">
+                    <i class="bx bx-credit-card"></i>
+                    
+                </div>
+
+                <div class="card-grp space">
+                    <div class="card-item icon-relative">
+                        <label for="expiry_date" class="label">Expiry Date:</label>
+                        <input type="text" id="expiry_date" class="input" name="expiry_date" placeholder="00 / 00" data-mask="00 / 00">
+                        <i class="bx bx-calendar"></i>
+                    </div>
+
+                    <div class="card-item icon-relative">
+                        <label for="cvv" class="label">CVV:</label>
+                        <input type="text" id="cvv" class="input" name="cvv" placeholder="000" data-mask="000">
+                        <i class="bx bxs-lock"></i>
+                    </div>
+                </div>
+
+                <div class="btn" id="payButton">Pay</div>
+
+                <div class="error" id="cardHolderError"></div>
+                <div class="error" id="cardNumberError"></div>
+                <div class="error" id="expiryDateError"></div>
+                <div class="error" id="cvvError"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS Files/Payment.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+</body>
+</html>
