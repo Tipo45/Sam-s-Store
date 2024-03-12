@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration page</title>
-    <link rel="stylesheet" href="CSS Files/registration.css">
-</head>
-<body>
+    <link rel="stylesheet" href="CSS Files/registration.css" />
+    <script type="module" src="./Scripts/register.js"></script>
+  </head>
+  <body>
     <div class="registration">
-        <form name="registrationForm" method="post" id="form" action="/">
-            <h2>Registration Form</h2>
-            <div class="login_content">
-                <label for="name" class="login-label">Username:</label>
-                <input type="text" id="username" name="name">
-                <div class="error" id="usernameError"></div>
-            </div>
-            <div class="error"></div>
+      <form name="registrationForm" method="post" id="form" action="/">
+        <div class="error" id="Error"></div>
+        <h2>Registration Form</h2>
+        <div class="login_content">
+          <label for="name" class="login-label">Username:</label>
+          <input type="text" id="username" name="name" />
+          <div class="error" id="usernameError"></div>
+        </div>
+        <div class="error"></div>
 
-            <div class="login_content">
-                <label for="email" class="login-label">Email:</label>
-                <input type="email" id="email" name="email">
-                <div class="error" id="emailError"></div>
-            </div>
+        <div class="login_content">
+          <label for="email" class="login-label">Email:</label>
+          <input type="email" id="email" name="email" />
+          <div class="error" id="emailError"></div>
+        </div>
 
-            <div class="login_content">
-                <label for="password" class="login-label">Password:</label>
-                <input type="password" id="password" name="password">
-                <div class="error" id="passwordError"></div>
-            </div>
+        <div class="login_content">
+          <label for="password" class="login-label">Password:</label>
+          <input type="password" id="password" name="password" />
+          <div class="error" id="passwordError"></div>
+        </div>
 
-            <div class="login_content">
-                <label for="confirmPassword" class="login-label">Confirm Password:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword">
-                <div class="error" id="confirmPasswordError"></div>
-            </div>
+        <div class="login_content">
+          <label for="confirmPassword" class="login-label"
+            >Confirm Password:</label
+          >
+          <input type="password" id="confirmPassword" name="confirmPassword" />
+          <div class="error" id="confirmPasswordError"></div>
+        </div>
 
-            <div>
-                <input type="submit" class="button sub-btn" value="Submit">
-            </div>
-        </form>
+        <div>
+          <input
+            id="submitButton"
+            type="submit"
+            class="button sub-btn"
+            value="Submit"
+          />
+        </div>
+      </form>
     </div>
 
-    <script src="JS Files/Validation.js"></script>
-</body>
+    <!-- <script src="JS Files/Validation.js"></script> -->
+  </body>
 </html>
