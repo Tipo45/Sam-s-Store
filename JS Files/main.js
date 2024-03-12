@@ -1,6 +1,6 @@
 
 // Show Cart
-const cart = document.querySelector(".cart-button");
+let cart = document.querySelector(".cart-button");
 const cartShop = document.querySelector(".cart-open")
 
 // open Cart

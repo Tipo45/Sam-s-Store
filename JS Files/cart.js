@@ -1,6 +1,5 @@
-
 // Cart to store items
-const cart = {};
+// const cart = {};
 
 // Function to add item to the cart
 function addItem(product, price) {
@@ -28,32 +27,32 @@ function removeItem(product) {
 }
 
 // Function to handle button clicks using event delegation
-document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('add-to-cart-button')) {
-    const product = event.target.getAttribute('data-product');
-    const price = parseFloat(event.target.getAttribute('data-price'));
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("add-to-cart-button")) {
+    const product = event.target.getAttribute("data-product");
+    const price = parseFloat(event.target.getAttribute("data-price"));
     addItem(product, price);
   }
 });
 
 // Function to close the cart
 function closeCart() {
-  document.querySelector('.cart-open').style.display = 'none';
+  document.querySelector(".cart-open").style.display = "none";
 }
 
 // Function to open the cart (optional, you can implement it as needed)
 function openCart() {
-  document.querySelector('.cart-open').style.display = 'block';
+  document.querySelector(".cart-open").style.display = "block";
 }
 
 // Function to update the cart display
 function updateCartDisplay() {
-  const cartItemsElement = document.getElementById('cart-items');
-  cartItemsElement.innerHTML = '';
+  const cartItemsElement = document.getElementById("cart-items");
+  cartItemsElement.innerHTML = "";
 
-  for (const product in cart) {
+  for (const product in cart) { 
     const item = cart[product];
-    const listItem = document.createElement('div');
+    const listItem = document.createElement("div");
     listItem.innerHTML = `
       <span>${product} (Quantity: ${item.quantity})</span>
       <span>$${item.price * item.quantity}</span>

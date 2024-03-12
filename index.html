@@ -1,336 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="CSS Files/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
+    <link rel="stylesheet" href="CSS Files/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script type="module" src="./Scripts/login.js"></script>
+  </head>
+  <body>
     <!-- Header -->
     <header class="header" id="header">
-            <a href="#" class="nav_logo">
-                <i class='bx bxs-shopping-bags'></i>Sam's Store
-            </a>
+      <a href="#" class="nav_logo">
+        <i class="bx bxs-shopping-bags"></i>Sam's Store
+      </a>
 
-            <nav class="nav_menu" id="nav-menu">
-                    <a  href="#" class="nav-link active-link">Home</a>
-                    <a  href="#steps-section-container" class="nav-link">Shop</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <i class='bx bxs-user-circle login-button nav-link'>l</i>
-                    <i class='bx bx-cart-alt cart-button nav-link' id="cart-shop">c</i>        
-            </nav>
+      <nav class="nav_menu" id="nav-menu">
+        <a href="#" class="nav-link active-link">Home</a>
+        <a href="#steps-section-container" class="nav-link">Shop</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <i class="bx bxs-user-circle login-button nav-link">l</i>
+        <i class="bx bx-cart-alt cart-button nav-link" id="cart-shop">c</i>
+      </nav>
 
-            <!-- Hamburger Button -->
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+      <!-- Hamburger Button -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
 
-    <!-- Cart -->
-    <div class="cart-open" id="cart">
+      <!-- Cart -->
+      <div class="cart-open" id="cart">
         <i class="bx bx-x cart_close" id="cart-close"></i>
 
         <h2 class="cart_title-center">My cart</h2>
         <div class="cart_container" id="cart-items"></div>
-        <a href="Payment_Page.html" class="button" onclick="checkout()">Checkout</a>
-    </div>
+        <a href="Payment_Page.html" class="button" onclick="checkout()"
+          >Checkout</a
+        >
+      </div>
 
-    <!-- Login -->
-    <div class="login">
+      <!-- Login -->
+      <div class="login">
         <i class="bx bx-x login_close" id="login-close"></i>
+        <form
+          name="loginform"
+          class="login_form"
+          id="form"
+          method="post"
+          action="/"
+        >
+          <div class="error" id="Error"></div>
+          <h2 class="login_title-center">Login</h2>
 
-        <form name="loginform" class="login_form" id="form" method="post" action="/">
-         <h2 class="login_title-center">Login</h2>
+          <div class="login_content">
+            <label for="email" class="login-label">Email</label>
+            <input type="email" id="email" name="email" required />
+            <div class="error" id="emailError"></div>
+          </div>
 
-            <div class="login_content">
-                <label for="email" class="login-label">Email</label>
-                <input type="email" id="email" name="email" required>
-                <div class="error" id="emailError"></div>
-            </div>
+          <div class="login_content">
+            <label for="password" class="login-label">Password</label>
+            <input type="password" id="password" name="password" />
+            <div class="error" id="passwordError"></div>
+          </div>
 
-            <div class="login_content">
-                <label for="password" class="login-label">Password</label>
-                <input type="password" id="password" name="password">
-                <div class="error" id="passwordError"></div>
-            </div>
+          <div>
+            <input id="submitButton" type="submit" class="button" />
+          </div>
 
-            <div>
-                <input type="submit" class="button">
-            </div>
-
-            <div>
-                <p class="signup">Not a member? <a href="registration.html">Sign up now</a></p>
-            </div>
+          <div>
+            <p class="signup">
+              Not a member? <a href="registration.html">Sign up now</a>
+            </p>
+          </div>
         </form>
-    </div>
-
+        <div id="logout" style="display: none">
+          <button id="logoutButton">Logout</button>
+        </div>
+      </div>
     </header>
 
     <!-- Main page -->
     <main class="main">
+      <section class="home" id="home">
+        <span class="imgHover">
+          <div class="image">
+            <img src="Images/online-fashion-shopping-with-laptop.jpg" alt="" />
+          </div>
+        </span>
 
-        <section class="home" id="home">
-            <span class="imgHover">
-                <div class="image">
-                    <img src="Images/online-fashion-shopping-with-laptop.jpg" alt="">
-                </div>
-            </span>
+        <div class="home-content">
+          <h5>#1 TRENDING ITEM</h5>
+          <h2>ORIGINAL IS NEVER FINISHED!!</h2>
 
-            <div class="home-content">
-                
-                <h5>#1 TRENDING ITEM</h5>
-                <h2>ORIGINAL IS NEVER FINISHED!!</h2>
+          <p>
+            This is a place to get clothes, ranging from trousers to hoodies,
+            shoes and t-shirts, easy and at a very affordable rate.
+          </p>
 
-                <p>This is a place to get clothes, ranging from trousers to hoodies, shoes and t-shirts, easy and at a very affordable rate.</p>
+          <div class="btn-box">
+            <a href="#steps-section-container">Buy Now</a>
+          </div>
+        </div>
+      </section>
 
-                <div class="btn-box">
-                    <a href="#steps-section-container">Buy Now</a>
-                </div>
-            </div>
+      <section class="steps-section-container" id="steps-section-container">
+        <div class="new-arrivals-text">
+          <h2>Clothing Items</h2>
+          <h4>Some of our available items</h4>
+        </div>
 
+        <div id="store" class="steps-section-container-content"></div>
+      </section>
 
-        </section>
+      <section class="black-friday">
+        <p>
+          <marquee behavior="" direction=""
+            >Black Friday Deals. 50% off coming soon!!</marquee
+          >
+        </p>
+      </section>
 
+      <section class="contact" id="contact">
+        <div class="contact-text">
+          <h2>Contact Us</h2>
+          <h4>Let's Work Together</h4>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad,
+            molestiae. Quisquam omnis id amet, possimus dolore fugiat! Adipisci
+            natus distinctio non dignissimos molestias odio ea nam. Fugiat
+            temporibus laborum recusandae!
+          </p>
+          <div class="contact-list">
+            <li><a href="#">Yenagoa - Otuoke - Bayelsa</a></li>
+            <li><a href="#">group8@gmail.com</a></li>
+            <li><a href="#">07093934567</a></li>
+          </div>
+          <div class="contact-icons">
+            <a href="#"><i class="bx bxl-whatsapp"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-telegram"></i></a>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+            <a href="#"><i class="bx bxl-discord"></i></a>
+          </div>
+        </div>
 
-        <section class="steps-section-container" id="steps-section-container">
-            <div class="new-arrivals-text">
-                <h2>Clothing Items</h2>
-                <h4>Some of our available items</h4>
-            </div>
-    
-            <div class="steps-section-container-content">
-                <div class="row">
-                    <img src="Images/Trouser7.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Trousers</h6>
-                        </div>
-                    </div>
-                    <h5>$45</h5>
-                    <button class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</button>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Hoodie1.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Hoodie</h6>
-                        </div>
-                    </div>
-                    <h5>$35</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Trouser3.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Trousers</h6>
-                        </div>
-                    </div>
-                    <h5>$45</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Hoodie3.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Trousers</h6>
-                        </div>
-                    </div>
-                    <h5>$35</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Trouser1.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Trousers</h6>
-                        </div>
-                     </div>
-                    <h5>$45</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Shirt1.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Shirt</h6>
-                        </div>
-                     </div>
-                    <h5>$25</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Shoe3.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Shoe</h6>
-                        </div>
-                    </div>
-                    <h5>$60</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Trouser2.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Trousers</h6>
-                        </div>
-                    </div>
-                    <h5>$88</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Shoe4.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Shoe</h6>
-                        </div>
-                     </div>
-                    <h5>$60</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Trouser7.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Trousers</h6>
-                        </div>
-                    </div>
-                    <h5>$65</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Shoe2.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Shoe</h6>
-                        </div>
-                    </div>
-                    <h5>$60</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Trouser4.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Trousers</h6>
-                        </div>
-                    </div>
-                    <h5>$45</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Shoe1.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Shoe</h6>
-                        </div>
-                    </div>
-                    <h5>60</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Trouser5.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Trousers</h6>
-                        </div>
-                    </div>
-                    <h5>$55</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Hoodie2.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Hoodie</h6>
-                        </div>
-                    </div>
-                    <h5>$70</h5>
-                    <h3 class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-                <div class="row">
-                    <img src="Images/Trouser6.jpg" alt="">
-                    <div class="main-row">
-                        <div class="row-text">
-                            <h6>Trousers</h6>
-                        </div>
-                    </div>
-                    <h5>$40</h5>
-                    <h3  class="add-to-cart-button" data-product="Trousers" data-price="45">Add To Cart</h3>
-                </div>
-    
-            </div>
-        </section>
-
-        <section class="black-friday">
-            <p><marquee behavior="" direction="">Black Friday Deals. 50% off coming soon!!</marquee></p>
-        </section>
-    
-        <section class="contact" id="contact">
-            <div class="contact-text">
-                <h2>Contact Us</h2>
-                <h4>Let's Work Together</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, molestiae. Quisquam omnis id amet, possimus dolore fugiat! Adipisci natus distinctio non dignissimos molestias odio ea nam. Fugiat temporibus laborum recusandae!</p>
-                <div class="contact-list">
-                    <li><a href="#">Yenagoa - Otuoke - Bayelsa</a></li>
-                    <li><a href="#">group8@gmail.com</a></li>
-                    <li><a href="#">07093934567</a></li>
-                </div>
-                <div class="contact-icons">
-                    <a href="#"><i class='bx bxl-whatsapp'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-telegram'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-discord'></i></a>
-                </div>
-            </div>
-    
-            <div class="contact-form">
-                <form action="#" method="post">
-                    <input type="text" placeholder="Enter Your Name" required>
-                    <input type="email" placeholder="Enter Your Email">
-                    <input type="text" placeholder="Enter Your Subject">
-                    <textarea name="" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
-                    <input type="submit" value="Submit" class="send">
-                </form>
-            </div>
-        </section>
-        
+        <div class="contact-form">
+          <form action="#" method="post">
+            <input type="text" placeholder="Enter Your Name" required />
+            <input type="email" placeholder="Enter Your Email" />
+            <input type="text" placeholder="Enter Your Subject" />
+            <textarea
+              name=""
+              cols="40"
+              rows="10"
+              placeholder="Enter Your Message"
+            ></textarea>
+            <input type="submit" value="Submit" class="send" />
+          </form>
+        </div>
+      </section>
     </main>
 
     <!-- footer -->
     <footer>
-        <div class="foot-content">
-            <p>&copy; 2024 Group 8 Developers. All Rights reserved.</p>
-        </div>
+      <div class="foot-content">
+        <p>&copy; 2024 Group 8 Developers. All Rights reserved.</p>
+      </div>
     </footer>
 
     <!-- Back to Top -->
     <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
 
     <script src="JS Files/Hamburger_menu.js"></script>
-    <script src="JS Files/cart.js"></script>
+    <script type="module" src="./Scripts/store.js"></script>
+    <script type="module" src="./Scripts/cart.js"></script>
     <script src="JS Files/main.js"></script>
-    <script src="JS Files/Login_Validation.js"></script>
-
-</body>
+  </body>
 </html>
